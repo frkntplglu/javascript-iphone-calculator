@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+html{
+  font-size:16px;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+body{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator{
+  background: #000;
+  width:337px;
+  height:600px;
+  box-sizing: border-box;
+  padding:15px;
+  max-width:100%;
+}
+.calculator__result{
+  height: 170px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  color: #fff;
+  font-size:4.5rem;
+  font-weight: 100;
+  display: flex;
+  text-align: right;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.calculator__buttons{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.calculator__buttons--button{
+  background: #333;
+  width:calc(25% - 10px);
+  margin-bottom:12px;
+  border-radius: 50%;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items:center;
+  font-size:2rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+.calculator__buttons--button:hover{
+  background: #ff9501;
+}
+.calculator__buttons--button:nth-child(4n){
+  background: #ff9501;
+}
+.calculator__buttons--button:before{
+  
+  content: "";
+	display: block;
+  padding-top: 100%;
+  
+}
