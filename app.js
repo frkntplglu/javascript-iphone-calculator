@@ -36,6 +36,14 @@ var updateDisplayValue = (e) => {
   
 }
 
+var process = (operator) => {
+  pendingValue = displayValue;
+  displayValue = 0;
+  result.textContent = displayValue;
+  evalArray.push(pendingValue);
+  evalArray.push(operator);
+}
+
 
 var performOperation = (e) => {
   var operator = e.target.attributes["data-operator"].value;
@@ -70,14 +78,6 @@ var performOperation = (e) => {
   }
 }
 
-var process = (operator) => {
-  pendingValue = displayValue;
-  displayValue = 0;
-  result.textContent = displayValue;
-  evalArray.push(pendingValue);
-  evalArray.push(operator);
-}
-
 
 for(let i = 0; i < numbers.length; i++){
   numbers[i].addEventListener("click",updateDisplayValue,false);
@@ -87,11 +87,6 @@ for(let i = 0; i < operators.length; i++){
   operators[i].addEventListener("click",performOperation);
 }
 
-
-
-var performOperation = () => {
-
-}
 
 
 
